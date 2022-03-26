@@ -13,11 +13,12 @@ const Shop = () => {
 
     const handleAddCartBtn = (product) => {
         console.log(product);
-        const exists = products.find(pro => pro.id === product.id)
-        if (exists) {
-            alert('Please select only 1 item')
-        }
         const newCart = [...carts, product]
+        const exists = newCart.filter(cart => cart.id === product.id)
+        if (exists.length > 1) {
+            alert('Please select only 1 item')
+            return;
+        }
         if (newCart.length > 4) {
             alert('Please select total 4 item')
         } else {
@@ -45,6 +46,7 @@ const Shop = () => {
                         handleAddCartBtn={handleAddCartBtn}
                     ></Product>)
                 }
+                
             </div>
             <div className="order-container">
                 <Order
