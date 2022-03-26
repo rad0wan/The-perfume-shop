@@ -22,7 +22,7 @@ const Shop = () => {
             return;
         }
         if (newCart.length > 4) {
-            alert('Please select total 4 item')
+            alert("Can't select more than 4 item")
         } else {
             setCarts(newCart)
         }
