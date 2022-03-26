@@ -14,16 +14,19 @@ const Shop = () => {
     const handleAddCartBtn = (product) => {
         console.log(product);
         const newCart = [...carts, product]
-        setCarts(newCart)
+        if (newCart.length > 4) {
+            alert('Please select only 4 item')
+        } else {
+            setCarts(newCart)
+        }
     }
 
     const handleChoose1Btn = () => {
-
+        const randomNum = Math.floor(Math.random() * 4);
+        setCarts(carts[randomNum])
     }
 
-    const handleChooseAgainBtn = () => {
-        setCarts([])
-    }
+    
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -39,7 +42,7 @@ const Shop = () => {
                 <Order
                     carts={carts}
                     handleChoose1Btn={handleChoose1Btn}
-                    handleChooseAgainBtn={handleChooseAgainBtn}
+                    // handleChooseAgainBtn={handleChooseAgainBtn}
                 ></Order>
             </div>
         </div>
