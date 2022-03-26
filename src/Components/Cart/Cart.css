@@ -8,3 +8,6 @@
     width: 50px;
     border-radius: 25px;
 }
+.cart-container span{
+    cursor: pointer;
+}

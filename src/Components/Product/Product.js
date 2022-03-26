@@ -6,7 +6,7 @@ const Product = ({ product, handleAddCartBtn }) => {
     return (
         <div className='product'>
             <img src={img} alt="" />
-            <h3>{name}</h3>
+            <h5>{name}</h5>
             <p>Price: ${price}</p>
             <button onClick={() => handleAddCartBtn(product)} className='btn-add'>
                 <span className='add-cart'>Add to Cart</span>
