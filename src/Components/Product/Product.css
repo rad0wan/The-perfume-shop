@@ -14,16 +14,13 @@
     width: 286px;
     padding: 20px;
 }
-.btn-add{
+/* .btn-add{
     padding: 10px;
     border-radius: 10px;
     border: none;
     background-color: green;
     
-}
-/* <button class="button-68" role="button">Button 68</button> */
-
-/* CSS */
+} */
 .btn-add {
   appearance: none;
   backface-visibility: hidden;
@@ -54,7 +51,6 @@
   vertical-align: top;
   white-space: nowrap;
 }
-
 .btn-add:hover {
   background-color: #1e8449;
   opacity: 1;
@@ -69,4 +65,7 @@
 
 .btn-add:hover {
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+.add-cart{
+  padding-right: 4px;
 }

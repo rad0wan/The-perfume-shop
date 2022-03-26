@@ -28,7 +28,7 @@ const Shop = () => {
 
     const handleChoose1Btn = () => {
         const randomNum = Math.floor(Math.random() * 4);
-        if (carts[randomNum]) {
+        if (carts[randomNum] && carts.length > randomNum) {
             setCarts([carts[randomNum]]);
         }
     }
@@ -46,7 +46,7 @@ const Shop = () => {
                         handleAddCartBtn={handleAddCartBtn}
                     ></Product>)
                 }
-                
+
             </div>
             <div className="order-container">
                 <Order
