@@ -6,7 +6,7 @@ const Cart = ({ cart, handleDeleteBtn }) => {
     return (
         <div className='cart-container'>
             <img src={img} alt="" />
-            <h4>{name}</h4>
+            <h6>{name}</h6>
             <span onClick={()=>handleDeleteBtn(cart)}><MdDeleteSweep size={'1.5rem'} /></span>
         </div>
     );
