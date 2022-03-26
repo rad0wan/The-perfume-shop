@@ -13,9 +13,13 @@ const Shop = () => {
 
     const handleAddCartBtn = (product) => {
         console.log(product);
+        const exists = products.find(pro => pro.id === product.id)
+        if (exists) {
+            alert('Please select only 1 item')
+        }
         const newCart = [...carts, product]
         if (newCart.length > 4) {
-            alert('Please select only 4 item')
+            alert('Please select total 4 item')
         } else {
             setCarts(newCart)
         }
@@ -23,10 +27,14 @@ const Shop = () => {
 
     const handleChoose1Btn = () => {
         const randomNum = Math.floor(Math.random() * 4);
-        setCarts(carts[randomNum])
+        if (carts[randomNum]) {
+            setCarts([carts[randomNum]]);
+        }
     }
 
-    
+    const handleChooseAgainBtn = () => {
+        setCarts([])
+    }
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -42,7 +50,7 @@ const Shop = () => {
                 <Order
                     carts={carts}
                     handleChoose1Btn={handleChoose1Btn}
-                    // handleChooseAgainBtn={handleChooseAgainBtn}
+                    handleChooseAgainBtn={handleChooseAgainBtn}
                 ></Order>
             </div>
         </div>

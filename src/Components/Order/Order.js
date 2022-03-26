@@ -2,11 +2,7 @@ import React from 'react';
 import Cart from '../Cart/Cart';
 import './Order.css'
 const Order = ({ carts, handleChoose1Btn, handleChooseAgainBtn }) => {
-    console.log(carts);
-
-    const handleChooseAgainBtn = () => {
-        setCarts([])
-    }
+    // console.log(carts);
     return (
         <div className='order'>
             <h3>Selected Products</h3>
