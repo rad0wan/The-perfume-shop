@@ -36,6 +36,10 @@ const Shop = () => {
     const handleChooseAgainBtn = () => {
         setCarts([])
     }
+    const handleDeleteBtn = (product) => {
+        const exists = carts.filter(cart => cart.id !== product.id)
+        setCarts(exists)
+    }
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -53,6 +57,7 @@ const Shop = () => {
                     carts={carts}
                     handleChoose1Btn={handleChoose1Btn}
                     handleChooseAgainBtn={handleChooseAgainBtn}
+                    handleDeleteBtn={handleDeleteBtn}
                 ></Order>
             </div>
         </div>

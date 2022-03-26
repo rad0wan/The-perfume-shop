@@ -1,7 +1,7 @@
 import React from 'react';
 import Cart from '../Cart/Cart';
 import './Order.css'
-const Order = ({ carts, handleChoose1Btn, handleChooseAgainBtn }) => {
+const Order = ({ carts, handleChoose1Btn, handleChooseAgainBtn, handleDeleteBtn }) => {
     // console.log(carts);
     return (
         <div className='order'>
@@ -10,6 +10,7 @@ const Order = ({ carts, handleChoose1Btn, handleChooseAgainBtn }) => {
                 carts.map(cart => <Cart
                     key={cart.id}
                     cart={cart}
+                    handleDeleteBtn={handleDeleteBtn}
                 ></Cart>)
             }
             <div className='btn-container'>
