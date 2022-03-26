@@ -1,0 +1,23 @@
+.order{
+    /* height: 500px; */
+    background-color: rgb(173, 172, 172);
+    border-radius: 20px;
+}
+.order h3{
+    text-align: center;
+    padding:20px;
+}
+.btn-container{
+    
+ padding-bottom: 20px;   
+}
+.btn-choose{
+    padding: 12px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    display: block;
+    margin: 12px;
+}

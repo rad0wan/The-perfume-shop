@@ -1,0 +1,19 @@
+.product{
+    /* border: 1px solid red; */
+    width: 330px;
+    /* height: 500px; */
+    text-align: center;
+}
+.product:hover{
+     box-shadow: inset;
+}
+.product img{
+    width: 286px;
+    padding: 30px;
+}
+.btn-add{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+}
